@@ -1,0 +1,21 @@
+#Note : Use strip() to remove newline at the end of filename's content 
+
+def save():
+	print "\n************************************************"
+	global txtFilename
+	filename=txtFilename.get(1.0,Tkinter.END)
+	print "Filename : ",filename 
+
+	global txtContent
+	content=txtContent.get(1.0,Tkinter.END)
+	print "Content : ",content
+	print "\n************************************************"
+	try:
+		f = open(filename,"w")
+		f.write(content) #0.0 will raise an error
+		tkMessageBox.showinfo( "Success",filename.strip()+" successfully created.")
+
+	except:
+		tkMessageBox.showinfo("Error","Error while creating file")
+	finally:
+		f.close()
