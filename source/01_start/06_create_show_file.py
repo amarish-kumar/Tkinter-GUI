@@ -58,14 +58,40 @@ def save():
 
 	
 
-
-
 butSave=Tkinter.Button(root,text='Save', command=save)
 butSave.pack()
 
 butShowText=Tkinter.Button(root,text='Show text', command=show_text)
 butShowText.pack()
 
+def show_file_content():
+	global txtPath
+	filepath = txtPath.get(1.0,Tkinter.END).strip() #strip() is required to remove newline from end
+	print "Filepath : "+filepath
+	import os
+	if os.path.exists(filepath):
+		if os.path.isfile(filepath):
+			try:
+				f = open(filepath,"r")
+				l = f.readlines()
+				print l
+				content = ''.join(l)
+				tkMessageBox.showinfo("Content of "+filepath,content)
+			except:
+				tkMessageBox("Error","Error while reading file.")
+			finally:
+				f.close()
+		else:
+			tkMessageBox.showinfo("Error","You only  need to specify the fullcd path path of file")
+	else:
+		tkMessageBox.showerror("Error","This is not a valid path or path does not exist.")
+
+txtPath = Tkinter.Text(root,height=1,width=100,bg="#d1c8c6",fg="#0000ff",pady=5)
+txtPath.insert(Tkinter.INSERT,"hello.py")
+txtPath.pack()
+
+butShowFile=Tkinter.Button(root,text='Show File Content', command=show_file_content)
+butShowFile.pack()
 #-----------------------------------
 
 root.mainloop() #Entering the main event loop to take action against each event triggered by the user.

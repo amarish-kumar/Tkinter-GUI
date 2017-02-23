@@ -1,0 +1,5 @@
+1. root.attributes("-fullscreen",True)
+2. txtPath.insert(Tkinter.INSERT,"hello.py")
+3. v = Tkinter.StringVar()
+   labName = Tkinter.Label(root,textvariable=v,relief=Tkinter.RAISED,padx=15,pady=5)
+   v.set("Filename")
