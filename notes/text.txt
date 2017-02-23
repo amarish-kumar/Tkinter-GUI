@@ -1,0 +1,18 @@
+#!/usr/bin/python2.7
+#23 Feb 2017
+
+import Tkinter
+import tkMessageBox
+
+root = Tkinter.Tk() #Creating GUI aplication's main window
+
+
+def show_text():
+	global txtAge
+	print txtAge.get(1.0,Tkinter.END)  #0.0 will raise an error
+
+butShowText=Tkinter.Button(root,text='Show text', command=show_text)
+butShowText.pack()
+--------------
+
+root.mainloop() #Entering the main event loop to take action against each event triggered by the user.
