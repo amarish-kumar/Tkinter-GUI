@@ -56,10 +56,6 @@ def save():
 		tkMessageBox.showinfo("Error","Filename should not be empty.")
 		return
 
-	
-
-
-
 butSave=Tkinter.Button(root,text='Save', command=save)
 butSave.pack()
 

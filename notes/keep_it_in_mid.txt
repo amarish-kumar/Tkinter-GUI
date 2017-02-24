@@ -3,3 +3,11 @@
 3. v = Tkinter.StringVar()
    labName = Tkinter.Label(root,textvariable=v,relief=Tkinter.RAISED,padx=15,pady=5)
    v.set("Filename")
+
+4. root.title("BoomPy editor") 
+5. import tkFont
+6. lab_editor_menu.place(x=55,y=0)
+7. print lab_editor_menu.winfo_width()
+   print lab_editor_menu.winfo_height()
+
+8. 

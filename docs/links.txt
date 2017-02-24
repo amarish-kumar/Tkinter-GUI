@@ -1,0 +1,1 @@
+http://stackoverflow.com/questions/15565384/python-text-widget-get-method

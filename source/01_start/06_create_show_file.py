@@ -1,4 +1,4 @@
-#!/usr/bin/python2.7
+#!/usr/bin/env python
 #23 Feb 2017
 
 import Tkinter
@@ -9,7 +9,7 @@ root.attributes("-fullscreen",True)
 
 #------------ Widgets --------------
 v = Tkinter.StringVar()
-labName = Tkinter.Label(root,textvariable=v,relief=Tkinter.RAISED,padx=15,pady=5)
+labName = Tkinter.Label(root,textvariable=v,relief=Tkinter.RAISED,padx=15,pady=5,font="Tahoma")
 v.set("Filename")
 labName.pack()
 
@@ -82,7 +82,7 @@ def show_file_content():
 			finally:
 				f.close()
 		else:
-			tkMessageBox.showinfo("Error","You only  need to specify the fullcd path path of file")
+			tkMessageBox.showinfo("Error","You only  need to specify the full path of file")
 	else:
 		tkMessageBox.showerror("Error","This is not a valid path or path does not exist.")
 
