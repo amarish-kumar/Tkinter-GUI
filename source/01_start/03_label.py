@@ -27,25 +27,25 @@ def show_table():
 		st+='\n'
 	tkMessageBox.showinfo("Table",st)
 
-butName = Tkinter.Button(root,text="Name",command=show_name)
-butName.pack()
+but_name = Tkinter.Button(root,text="Name",command=show_name)
+but_name.pack()
 
-butAge = Tkinter.Button(root,text="Age",command=show_age)
-butAge.pack()
+but_age = Tkinter.Button(root,text="Age",command=show_age)
+but_age.pack()
 
-butProgLangs = Tkinter.Button(root,text="Programming languages",command=show_prog_langs)
-butProgLangs.pack()
+but_prog_langs = Tkinter.Button(root,text="Programming languages",command=show_prog_langs)
+but_prog_langs.pack()
 
-butTable = Tkinter.Button(root,text="Show tables from 1 to 10",command=show_table)
-butTable.pack()
+but_table = Tkinter.Button(root,text="Show tables from 1 to 10",command=show_table)
+but_table.pack()
 
 v = Tkinter.StringVar()
-labName = Tkinter.Label(root,text="Name",textvariable=v,relief=Tkinter.RAISED)
+lab_name = Tkinter.Label(root,text="Name",textvariable=v,relief=Tkinter.RAISED)
 v.set("Do you like programming?")
-labName.pack()
+lab_name.pack()
 
-labAge = Tkinter.Label(root,text="Age")
-labAge.pack()
+lab_age = Tkinter.Label(root,text="Age")
+lab_age.pack()
 #-----------------------------------
 
 root.mainloop() #Entering the main event loop to take action against each event triggered by the user.

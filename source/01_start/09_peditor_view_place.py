@@ -5,7 +5,7 @@ import tkFont
 
 root = Tk()
 root.attributes("-fullscreen",True)
-root.title("BoomPy editor") 
+root.title("BoomFox editor") 
 
 #Creating font
 tahoma30px_font = tkFont.Font(family="Helvetica",size=30)
