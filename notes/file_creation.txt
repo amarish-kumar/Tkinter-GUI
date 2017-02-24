@@ -2,20 +2,23 @@
 
 def save():
 	print "\n************************************************"
-	global txtFilename
-	filename=txtFilename.get(1.0,Tkinter.END)
-	print "Filename : ",filename 
+	global txt_filename
+	filename=txt_filename.get(1.0,Tkinter.END).strip()
+	if len(filename)!=0:
+		print "Filename : ",filename 
+		global txt_content
+		content=txt_content.get(1.0,Tkinter.END)
+		print "Content : ",content
+		print "\n************************************************"
+		try:
+			f = open(filename,"w")
+			f.write(content) #0.0 will raise an error
+			tkMessageBox.showinfo( "Success",filename.strip()+" successfully created.")
 
-	global txtContent
-	content=txtContent.get(1.0,Tkinter.END)
-	print "Content : ",content
-	print "\n************************************************"
-	try:
-		f = open(filename,"w")
-		f.write(content) #0.0 will raise an error
-		tkMessageBox.showinfo( "Success",filename.strip()+" successfully created.")
-
-	except:
-		tkMessageBox.showinfo("Error","Error while creating file")
-	finally:
-		f.close()
+		except:
+			tkMessageBox.showinfo("Error","Error while creating file")
+		finally:
+			f.close()
+	else:
+		tkMessageBox.showinfo("Error","Filename should not be empty.")
+		return
