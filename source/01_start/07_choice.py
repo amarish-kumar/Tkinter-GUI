@@ -12,7 +12,7 @@ helvetica20px_font = tkFont.Font(family="Helvetica",size=20)
 lab_state = Label(root, text="State",font=helvetica20px_font,bg="navy",fg="white")	#State
 lab_state.pack()
 
-tahoma30px_font = tkFont.Font(family="Helvetica",size=30)
+tahoma30px_font = tkFont.Font(family="Tahoma",size=30)
 lab_country = Label(root, text="Country",font=tahoma30px_font,fg="#0000ff",bg="pink")	#State
 lab_country.pack()
 

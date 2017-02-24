@@ -9,7 +9,8 @@ root.attributes("-fullscreen",True)
 
 #------------ Widgets --------------
 v = Tkinter.StringVar()
-lab_name = Tkinter.Label(root,textvariable=v,relief=Tkinter.RAISED,padx=15,pady=5,font="Tahoma")
+# lab_name = Tkinter.Label(root,textvariable=v,relief=Tkinter.RAISED,padx=15,pady=5,font="Tahoma")
+lab_name = Tkinter.Label(root,textvariable=v,relief=Tkinter.RAISED,padx=15,pady=5,font="Helvetica",fg="#ff0000", weight="bold")
 v.set("Filename")
 lab_name.pack()
 

@@ -21,3 +21,9 @@
 	bfox_menubar.add_cascade(label="Help",menu=bfox_helpmenu) 
 
 10. root.geometry("500x500")
+
+11. bfox_filemenu.add_cascade(label="Create",menu=bfox_create_submenu)
+
+12. content=txt_content.get(1.0,Tkinter.END)
+
+13. Gif images worked for me but png didn't.

@@ -5,7 +5,7 @@ root = Tk()
 root.attributes("-fullscreen",True)
 #..................................
 
-tahoma30px_font = tkFont.Font(family="Helvetica",size=30)
+tahoma30px_font = tkFont.Font(family="Tahoma",size=30)
 
 #Horizontally aligning labels
 lab_editor_menu = Label(text="File",font=tahoma30px_font,bg="#5b2497",fg="White") 
